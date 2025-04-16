@@ -33,7 +33,7 @@ class _MessageScreenState extends State<MessageScreen> {
 
     // Envoie du message au backend
     final response = await http.post(
-      Uri.parse('https://ton-backend.onrender.com/messages'), // URL de ton backend sur Render
+      Uri.parse('https://test-render-u06m.onrender.com/messages'), // URL de ton backend sur Render
       headers: {'Content-Type': 'application/json'},
       body: json.encode({'message': message}),
     );
