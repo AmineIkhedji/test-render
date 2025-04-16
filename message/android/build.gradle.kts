@@ -1,16 +1,3 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-
-buildscript {
-    dependencies {
-        classpath("com.android.tools.build:gradle:8.0.2")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.10")
-    }
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
-
 allprojects {
     repositories {
         google()
@@ -25,7 +12,6 @@ subprojects {
     val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
     project.layout.buildDirectory.value(newSubprojectBuildDir)
 }
-
 subprojects {
     project.evaluationDependsOn(":app")
 }

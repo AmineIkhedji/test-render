@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 // commentaire de imane : amine a3egoun
 
+=======
+>>>>>>> 66e6605e9c9980790ea3f9755d60d5dba511f989
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -11,7 +14,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Message App',
+<<<<<<< HEAD
       theme: ThemeData(primarySwatch: Colors.blue),
+=======
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+>>>>>>> 66e6605e9c9980790ea3f9755d60d5dba511f989
       home: MessageScreen(),
     );
   }
@@ -33,9 +42,13 @@ class _MessageScreenState extends State<MessageScreen> {
 
     // Envoie du message au backend
     final response = await http.post(
+<<<<<<< HEAD
       Uri.parse(
         'https://test-render-u06m.onrender.com/messages',
       ), // URL de ton backend sur Render
+=======
+      Uri.parse('https://test-render-u06m.onrender.com/messages'), // URL de ton backend sur Render
+>>>>>>> 66e6605e9c9980790ea3f9755d60d5dba511f989
       headers: {'Content-Type': 'application/json'},
       body: json.encode({'message': message}),
     );
@@ -87,7 +100,13 @@ class _MessageScreenState extends State<MessageScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+<<<<<<< HEAD
       appBar: AppBar(title: Text('Envoyer un Message')),
+=======
+      appBar: AppBar(
+        title: Text('Envoyer un Message'),
+      ),
+>>>>>>> 66e6605e9c9980790ea3f9755d60d5dba511f989
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -97,7 +116,14 @@ class _MessageScreenState extends State<MessageScreen> {
               decoration: InputDecoration(labelText: 'Entrez votre message'),
             ),
             SizedBox(height: 20),
+<<<<<<< HEAD
             ElevatedButton(onPressed: sendMessage, child: Text('Envoyer')),
+=======
+            ElevatedButton(
+              onPressed: sendMessage,
+              child: Text('Envoyer'),
+            ),
+>>>>>>> 66e6605e9c9980790ea3f9755d60d5dba511f989
           ],
         ),
       ),
